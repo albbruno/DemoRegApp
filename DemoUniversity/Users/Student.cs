@@ -49,6 +49,16 @@ namespace DemoUniversity.Users
             return true;
         }
 
+        public bool AddCourses(Dictionary<string, Courses.Courses> someCourses)
+        {
+            foreach (KeyValuePair<string, Courses.Courses> aClass in someCourses)
+            {
+                AddCourse(aClass.Value);
+            }
+
+            return true;
+        }
+
         public override string GetInfo()
         {
 

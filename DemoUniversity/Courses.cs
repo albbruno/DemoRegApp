@@ -118,6 +118,13 @@ namespace DemoUniversity.Courses
             return mStudentRoster;
         }
 
+        public Student GetStudent(int id)
+        {
+            var student = mStudentRoster.Where(x => x.Id == id).FirstOrDefault();//ElementAt(0);
+
+            return student;
+        }
+
         public bool RemoveStudent(Student stdnt)
         {
             throw new NotImplementedException();
